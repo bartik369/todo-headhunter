@@ -1,0 +1,37 @@
+.input {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 10px;
+    height: 30px;
+    border-bottom: 1px solid #e7e7e7;
+     ::placeholder {
+        color: #dcdcdc;
+        font-style: italic;
+        font-family: "Inter", sans-serif;
+        font-weight: 200;
+        font-size: 18px;
+    }
+    .icon {
+        color: #dcdcdc;
+        margin-right: 10px;
+        position: absolute;
+        transition: all .5s ease-in-out;
+    }
+    .add {
+        font-size: 20px;
+        cursor: pointer;
+        color: #4f4f4f;
+    }
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding-right: 15px;
+        margin-left: 28px;
+        color: #4f4f4f;
+        &:focus~.icon {
+            color: #4f4f4f;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #f5f5f5;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 10px 0 1px;
+    box-shadow: 0 0 0 1px rgb(188, 188, 188) inset, 0 5px 0 -4px rgb(255, 255, 255), rgba(0, 0, 0, 0.1) 0px 1px 4px, 0 5px 0 -3px rgb(188, 188, 188), 0 11px 0 -8px rgb(255, 255, 255), rgba(0, 0, 0, 0.1) 0px 3px 7px, 0 11px 0 -7px rgb(188, 188, 188), 0 17px 0 -12px rgb(255, 255, 255), rgba(0, 0, 0, 0.1) 0px 7px 11px, 0 17px 0 -11px rgb(188, 188, 188);
+}
+
+.title {
+    color: #dba9bf;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+}

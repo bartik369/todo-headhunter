@@ -1,0 +1,77 @@
+.todos {
+    .title {
+        color: #4f4f4f;
+        font-weight: 400;
+        font-size: 16px;
+        word-break: break-word;
+        padding-right: 15px;
+    }
+    .done {
+        color: #d9d9d9;
+        text-decoration: line-through;
+        word-break: break-word;
+        padding-right: 15px;
+        transition: all .4s ease-out;
+        transform: translateX(10px);
+    }
+    .info {
+        color: #696969;
+        font-size: 19px;
+        font-weight: 100;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .todo {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ededed;
+        padding: 15px 0;
+        .checkbox {
+            font-family: inherit;
+            font-weight: 100;
+            display: block;
+            line-height: 26px;
+            position: relative;
+            font-size: 17px;
+            padding-left: 45px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all .6s ease-in-out;
+            &:hover input~.check {
+                border: 1px solid #7ac0af;
+            }
+            input {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0;
+                color: #4f4f4f;
+                &:checked:checked~.check::after {
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 13px;
+                    border: 1px solid #7ac0af;
+                    border-width: 0 2px 2px 0;
+                    left: 8px;
+                    top: 3px;
+                    transform: rotate(40deg);
+                }
+                &:checked~.check {
+                    border: 1px solid #7ac0af;
+                }
+            }
+            .check {
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                border: 1px solid #f0f0f0;
+                border-radius: 50%;
+                margin-left: 10px;
+                left: 0;
+                top: -7px;
+                transition: all .4s ease-in-out;
+            }
+        }
+    }
+}
