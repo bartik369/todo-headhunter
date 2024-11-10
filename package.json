@@ -35,8 +35,6 @@
     "scripts": {
         "test": "jest",
         "test:cov": "jest --coverage --watchAll",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -dist",
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
