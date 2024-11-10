@@ -1,5 +1,4 @@
 @mixin button {
-    font-size: 12px;
     color: #696969;
     border: 1px solid #f6f4f6;
     padding: 5px 10px;
@@ -21,6 +20,7 @@
     .total {
         color: #696969;
         align-self: center;
+        margin-right: 7px;
     }
     .menu {
         display: inline-block;
@@ -30,10 +30,8 @@
         li {
             display: inline-block;
             transition: all .6s ease-in;
-            @include button;
-        }
-        li:not(:last-child) {
             margin-right: 7px;
+            @include button;
         }
         li:hover,
         li:active,
@@ -43,10 +41,27 @@
     }
     .reset {
         background-color: transparent;
+        font-size: 12px;
         transition: all .6s ease-in;
         @include button;
         &:hover {
             @include activeButton;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .panel {
+        justify-content: space-around;
+        font-size: 10px;
+        .menu {
+            li {
+                padding: 4px 7px;
+            }
+        }
+        .reset {
+            font-size: 10px;
+            padding: 4px 6px;
         }
     }
 }
