@@ -1,4 +1,3 @@
-//  import { selectTodos } from "./selectors";
 import { Todo } from "../../types/TodoTypes";
  const selectTodos = (state: { filtered: Todo[]; }) => state.filtered;
 
