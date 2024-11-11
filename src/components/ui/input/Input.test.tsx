@@ -38,17 +38,4 @@ describe('Test input component', () => {
         const inputElement = screen.getByPlaceholderText(todoConst.inputPlaceholder);
         expect(inputElement).toBeInTheDocument();
     });
-
-    // it('Empty input after click Add button', () => {
-    //     // && title should be delete for test
-    //     render(
-    //         <Provider store={store}>
-    //             <Input />
-    //     );
-    //     const inputElem = screen.getByPlaceholderText(todoConst.inputPlaceholder);
-    //     const btn = screen.getByTitle(todoConst.addTodo)
-    //     fireEvent.change(inputElem, {target: {value: "Test input text"}});
-    //     fireEvent.click(btn);
-    //     expect(inputElem.innerHTML).toBe("");
-    // })
 });

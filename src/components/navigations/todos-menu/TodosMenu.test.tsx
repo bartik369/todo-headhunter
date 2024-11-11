@@ -10,19 +10,21 @@ describe('Test TodosMenu component', () => {
   const mockStore = configureStore();
   let store= mockStore(initialState);
 
-  test('Render', () => {
+  it('Render', () => {
     render (
       <Provider store={store}>
         <TodosMenu />
       </Provider>
     );
   });
-  test('Snapshot', () => {
+
+  it('Snapshot', () => {
     const menuList = render(
       <Provider store={store}>
         <TodosMenu />
       </Provider>
     )
     expect(menuList).toMatchSnapshot();
-  })
+  });
+
 });

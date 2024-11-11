@@ -9,6 +9,7 @@ describe('Test Todos component', () => {
   }
   const mockStore = configureStore();
   let store = mockStore(initialState);
+
   it('Render', () => {
     render (
       <Provider store={store}>
@@ -23,7 +24,6 @@ describe('Test Todos component', () => {
         <Todos/>
       </Provider>
     )
-    expect(todosList).toMatchSnapshot()
-
+    expect(todosList).toMatchSnapshot();
   });
 })
