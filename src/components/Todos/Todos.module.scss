@@ -1,18 +1,21 @@
 .todos {
     .title {
         color: #4f4f4f;
-        font-weight: 400;
-        font-size: 16px;
+        font-weight: 300;
+        font-size: 21px;
         word-break: break-word;
         padding-right: 15px;
+        transition: all .4s ease-out;
     }
     .done {
         color: #d9d9d9;
+        font-weight: 300;
+        font-size: 21px;
         text-decoration: line-through;
         word-break: break-word;
         padding-right: 15px;
         transition: all .4s ease-out;
-        transform: translateX(10px);
+        transform: translateX(5px);
     }
     .info {
         color: #696969;
@@ -33,7 +36,7 @@
             line-height: 26px;
             position: relative;
             font-size: 17px;
-            padding-left: 45px;
+            padding-left: 50px;
             margin-bottom: 10px;
             cursor: pointer;
             transition: all .6s ease-in-out;
@@ -50,9 +53,9 @@
                     content: "";
                     position: absolute;
                     width: 5px;
-                    height: 13px;
+                    height: 12px;
                     border: 1px solid #7ac0af;
-                    border-width: 0 2px 2px 0;
+                    border-width: 0 1.5px 1.5px 0;
                     left: 8px;
                     top: 3px;
                     transform: rotate(40deg);
@@ -67,11 +70,32 @@
                 height: 22px;
                 border: 1px solid #f0f0f0;
                 border-radius: 50%;
-                margin-left: 10px;
+                margin-left: 14px;
                 left: 0;
                 top: -7px;
                 transition: all .4s ease-in-out;
             }
         }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .todos {
+        .todo {
+            .checkbox {
+                .check {
+                    left: 0;
+                    top: -6px;
+                }
+            }
+        }
+        .info {
+            font-size: 19px;
+            padding: 20px 0 2px;
+        }
+    }
+    .title,
+    .done {
+        font-size: 17px;
     }
 }

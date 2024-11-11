@@ -11,7 +11,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Inter", sans-serif;
+}
+
+button,
+input,
+textarea,
+body {
+    font-family: "Noto Sans", sans-serif;
 }
 
 .container {
@@ -25,7 +31,7 @@ body {
 }
 
 .title {
-    color: #dba9bf;
+    color: #e09ab9;
     font-size: 70px;
     font-weight: 100;
     text-align: center;
@@ -34,5 +40,8 @@ body {
 @media screen and (max-width: 520px) {
     .container {
         width: 100%;
+    }
+    .title {
+        font-size: 60px;
     }
 }

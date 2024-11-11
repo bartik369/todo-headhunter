@@ -37,6 +37,7 @@ const TodosMenu:FC = () => {
           {getItemValues(countItems, itemValuesArr)}
           {todoConst.items}
         </div>
+        <div className={style.navigation}>
         <menu className={style.menu}>
           <ul>
             {todosMenuData.map((item) => (
@@ -53,6 +54,7 @@ const TodosMenu:FC = () => {
         <button className={style.reset} onClick={resetHandler}>
           {todoConst.resetComplited}
         </button>
+        </div>
       </div>
     );
 };
