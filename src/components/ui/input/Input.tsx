@@ -3,7 +3,7 @@ import { useAppDispatch } from '../../../hooks/useReduxHook';
 import { addTodo } from '../../../store/TodoSlice';
 import * as todoConst from '../../../constants/todos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faChevronDown, faPlus, faSquarePlus} from "@fortawesome/free-solid-svg-icons";
+import {faChevronDown, faSquarePlus} from "@fortawesome/free-solid-svg-icons";
 import style from './Input.module.scss';
 
 const Input:FC = () => {
@@ -24,19 +24,18 @@ const Input:FC = () => {
             placeholder={todoConst.inputPlaceholder}
             onChange={(e) => setTitle(e.target.value)}
             onKeyDown={(e) => checkPressEnter(e)}
-            value={title} 
+            value={title}
             type="text"
             />
             <FontAwesomeIcon 
                 className={style.icon} 
                 icon={faChevronDown}
             />
-            {title && 
-            <FontAwesomeIcon 
-                className={style.add} 
-                onClick={todoHandler} 
-                icon={faSquarePlus}
-            />}
+            {title &&
+            <button name="add-btn" onClick={todoHandler} className={style.add}>
+                <FontAwesomeIcon title={todoConst.addTodo} icon={faSquarePlus}/>
+            </button>
+            }
         </div>
     );
 };

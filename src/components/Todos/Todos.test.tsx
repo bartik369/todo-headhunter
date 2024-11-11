@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render} from "@testing-library/react";
 import Todos from "./Todos";
 import configureStore from "redux-mock-store";
 import { Provider } from "react-redux";
@@ -9,14 +9,15 @@ describe('Test Todos component', () => {
   }
   const mockStore = configureStore();
   let store = mockStore(initialState);
-  test('Render', () => {
+  it('Render', () => {
     render (
       <Provider store={store}>
         <Todos />
       </Provider>
     )
-  })
-  test('Snapshot', () => {
+  });
+
+  it('Snapshot', () => {
     const todosList = render (
       <Provider store={store}>
         <Todos/>
@@ -24,5 +25,5 @@ describe('Test Todos component', () => {
     )
     expect(todosList).toMatchSnapshot()
 
-  })
+  });
 })

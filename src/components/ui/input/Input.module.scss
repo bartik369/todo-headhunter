@@ -31,10 +31,12 @@
         position: absolute;
         transition: all .5s ease-in-out;
     }
-    .add {
+    button.add {
         font-size: 25px;
         cursor: pointer;
         color: #8cbeb2;
+        border: none;
+        background-color: transparent;
         transition: all .5s ease-in-out;
         &:hover {
             color: #63d3b7;
