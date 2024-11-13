@@ -13,10 +13,10 @@ const Input:FC = () => {
     const todoHandler = () => {
         title && dispatch(addTodo(title));
         setTitle('');
-    }
+    };
     const checkPressEnter = (e:React.KeyboardEvent) => {
         if (e.key === "Enter") todoHandler();
-    }
+    };
     
     return (
         <div className={style.input}>

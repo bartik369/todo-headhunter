@@ -8,7 +8,7 @@
         transition: all .4s ease-out;
     }
     .done {
-        color: #d9d9d9;
+        color: #dbdfe6;
         font-weight: 300;
         font-size: 21px;
         text-decoration: line-through;
@@ -22,26 +22,32 @@
         font-size: 19px;
         font-weight: 100;
         text-align: center;
-        padding: 20px 0;
+        padding: 0 0 18px;
     }
     .todo {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #ededed;
-        padding: 15px 0;
+        background-color: #ffffff;
+        margin: 0 20px 10px;
+        padding: 20px 0;
+        border-radius: 4px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
         .checkbox {
+            font-size: 17px;
             font-family: inherit;
             font-weight: 100;
             display: block;
             line-height: 26px;
             position: relative;
-            font-size: 17px;
-            padding-left: 50px;
+            padding-left: 58px;
             margin-bottom: 10px;
             cursor: pointer;
             transition: all .6s ease-in-out;
-            &:hover input~.check {
-                border: 1px solid #7ac0af;
+            &:hover {
+                input~.check {
+                    background-color: #ebeef3;
+                    border: 1px solid #e7eaf0;
+                }
             }
             input {
                 position: absolute;
@@ -52,27 +58,28 @@
                 &:checked:checked~.check::after {
                     content: "";
                     position: absolute;
-                    width: 5px;
-                    height: 12px;
-                    border: 1px solid #7ac0af;
+                    width: 6px;
+                    height: 13px;
+                    border: 1px solid #ffffff;
                     border-width: 0 1.5px 1.5px 0;
-                    left: 8px;
-                    top: 3px;
+                    left: 9px;
+                    top: 4px;
                     transform: rotate(40deg);
                 }
                 &:checked~.check {
-                    border: 1px solid #7ac0af;
+                    background-color: #1853c6;
+                    border: 1px solid #1853c6;
                 }
             }
             .check {
                 position: absolute;
-                width: 22px;
-                height: 22px;
-                border: 1px solid #f0f0f0;
+                width: 26px;
+                height: 26px;
+                border: 1px solid #e0e0e0;
                 border-radius: 50%;
-                margin-left: 14px;
+                margin-left: 18px;
                 left: 0;
-                top: -7px;
+                top: -8px;
                 transition: all .4s ease-in-out;
             }
         }

@@ -1,24 +1,27 @@
 @mixin button {
-    color: #696969;
-    border: 1px solid #f6f4f6;
-    padding: 4px 10px;
-    border-radius: 5px;
+    background-color: #e7e9ef;
+    padding: 6px 14px 7px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #68748b;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 @mixin activeButton {
-    border: 1px solid #d096b0;
-    border-radius: 5px;
+    color: #fff;
+    background-color: #1853c6;
 }
 
 .panel {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    margin-top: 10px;
+    padding: 0 20px;
     font-weight: 300;
-    font-size: 13px;
     .total {
-        color: #696969;
+        font-size: 14px;
+        color: #707b90;
         align-self: center;
         margin-right: 7px;
         flex-basis: 90px;
@@ -41,8 +44,8 @@
         }
     }
     button.reset {
-        font-weight: 300;
         background-color: transparent;
+        border: none;
         transition: all .6s ease-in;
         @include button;
         &:hover {
@@ -54,7 +57,7 @@
 @media screen and (max-width: 520px) {
     .panel {
         padding: 10px 10px 25px;
-        font-size: 15px;
+        font-size: 11px;
         font-weight: 300;
         justify-content: center;
         flex-wrap: wrap;
@@ -63,7 +66,6 @@
         }
         .menu li,
         .reset {
-            font-size: 15px;
             padding: 4px 8px;
         }
     }
@@ -72,13 +74,9 @@
 @media screen and (max-width: 370px) {
     .panel {
         padding: 10px 10px 25px;
-        font-size: 14px;
         font-weight: 300;
         justify-content: center;
         flex-wrap: wrap;
-        .total {
-            padding: 10px 0 15px;
-        }
         .menu li,
         .reset {
             font-size: 11px;

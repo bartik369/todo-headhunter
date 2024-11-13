@@ -1,11 +1,14 @@
 .input {
     display: flex;
     align-items: center;
-    padding: 5px 25px 10px;
-    height: 40px;
-    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 25px;
+    height: 48px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e8ee;
+    border-radius: 20px 20px 0 0;
      ::placeholder {
-        color: #dcdcdc;
+        color: #d7dce3;
         font-style: italic;
         font-weight: 300;
         font-size: 21px;
@@ -14,33 +17,33 @@
         width: 100%;
         border: none;
         outline: none;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 21px;
         font-style: italic;
+        color: #495264;
         padding-right: 15px;
-        margin-left: 28px;
-        color: #4f4f4f;
+        margin-left: 40px;
+        background-color: transparent;
         &:focus~.icon {
-            color: #4f4f4f;
+            color: #495264;
         }
     }
     .icon {
-        color: #dcdcdc;
+        color: #a1acc6;
         font-size: 20px;
         margin-right: 10px;
         position: absolute;
         transition: all .5s ease-in-out;
     }
     button.add {
-        font-size: 25px;
+        font-size: 33px;
         cursor: pointer;
-        color: #8cbeb2;
+        color: #face8c;
         border: none;
         background-color: transparent;
         transition: all .5s ease-in-out;
         &:hover {
-            color: #63d3b7;
-            ;
+            color: #fdddad;
         }
     }
 }
@@ -48,7 +51,7 @@
 @media screen and (max-width: 520px) {
     .input {
          ::placeholder {
-            font-size: 15px;
+            font-size: 19px;
         }
     }
 }
